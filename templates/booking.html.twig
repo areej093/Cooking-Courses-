@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Booking{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+    body{
+background: #fffff;     }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 70px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #3bb5ca;
+            background-image: url('/images/kkk.jpeg');
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color:#000000;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color:#ffc93c;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color:#ffc93c;
+        }
+        .b{
+             color:#fffff;
+        }
+        .bb{
+             color:#fffff;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<script>
+function validateForm() {
+    var confirmation = confirm("Are you sure?");
+}
+</script>
+    <div class="container">
+        <h1 class="b">Booking</h1>
+        <h4 class="bb">Book your stay now</h4>
+        <form class="booking-form" method="POST">
+            {{ form_widget(form) }}
+        <hr>
+       <div> <button type="submit" class="btn btn-primary" onclick="validateForm()">Envoyer</button> </div>
+        </form> 
+        
+    </div>
+
+{% endblock %}

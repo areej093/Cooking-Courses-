@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+            align-items: start; 
+        }
+        .text-container {
+            grid-column: 1 / span 1; 
+        }
+
+        .h {
+            font-size: 50px;
+            margin-bottom: 40px;
+            color: #cbf078;
+        }
+
+        .prg {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #555555;
+        }
+
+        .hh {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        footer {
+ background: #f8f398;   
+  padding: 20px 0;
+ margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+background: #f8f398; 
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-column h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.footer-column p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #666;
+}
+.video-container {
+            grid-column: 2 / span 1; 
+            text-align: center; }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+<main>
+    <div class="container">
+        <div class="text-container">
+            <h1 class="h">FOOD AS CULTURE: CUISINE, FOOD CUSTOMS, AND CULTURAL IDENTITY</h1>
+            <p class="prg">
+       Food is an essential part of every culture. It’s more than just a means of sustenance, but a way of expressing oneself, connecting with others, and passing on rich cultural heritage. Food is deeply ingrained in our cultural identity and serves as a representation of our heritage, history, and values. Here’s an in-depth look at food as culture. <br></p>
+    <img src={{asset('images/photo1.png')}} width= "150%">    
+        </div>
+        <div class="video-container">
+            <img src={{asset('images/photo9.png')}} width= "100%">
+</main>
+  
+   <footer>
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-column">
+                <img src={{asset('images/photo3.png')}} width= "50%">    
+
+                <h2>Culture Cuisine Culinary</h2>
+                <p>Fond in 2024 </p>
+            </div>
+            <div class="footer-column">
+                <h3>WHAT WE DO</h3>
+                <ul>
+                    <li><a href="#">Food Distributions</a></li>
+                    <li><a href="#">Food Cours</a></li>
+                   <li><a href="#">Online cooking classes</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>GIVE</h3>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Ways Discouver outher recepice </a></li>
+                    <li><a href="#">Online cooking classes</a></li>
+                    <li><a href="#">Recipes and tutorials</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2024 CultureCulinary </p>
+        </div>
+    </div>
+</footer>
+
+  </div>
+        
+{% endblock %}

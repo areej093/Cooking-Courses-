@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+            align-items: start; 
+        }
+
+        .video-container {
+            grid-column: 2 / span 1; 
+            text-align: center; 
+        }
+
+        .text-container {
+            grid-column: 1 / span 1; 
+        }
+
+        .h {
+            font-size: 50px;
+            margin-bottom: 50px;
+            color: #cbf078;
+        }
+
+        .prg {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #555555;
+        }
+
+        .hh {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color:#cbf078;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        video::-webkit-media-controls {
+            display: none;
+        }
+        .our{
+             color:#cbf078;
+        }
+        .container1 .adv{
+            color:#cbf078;
+        }
+         table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #cbf078;
+        }
+        .Chefs{
+            color:#cbf078;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="text-container">
+            <h1 class="h">Welcome to Our platforme  :</h1>
+            <p class="prg">
+               Welcome to <u color="red">CultureCulinary</u> – your online destination to explore the delights of culinary culture around the world! Immerse yourself in a taste journey where each page tells a story of flavors, history and traditions. Our site is a celebration of culinary diversity, highlighting iconic dishes, ancestral cooking techniques and secrets of cuisines from around the world.
+
+Explore our extensive collection of authentic recipes, discover exotic ingredients, learn preparation techniques and get inspired to create culinary masterpieces in your own kitchen. Whether you're an experienced food enthusiast or a curious novice, you'll find a wealth of resources to spark your creativity and expand your gastronomic horizons.
+            </p>
+<img src={{asset('images/p4.jpg')}} width= "100%">
+        </div>
+
+        <div class="video-container">
+            <img src={{asset('images/p3.jpg')}} width= "100%">
+            <br>
+             <p class="prg">
+                <h3 class="hh">Why CultureCulinary?</h3>
+        joining our culinary culture site will allow you to experience an unforgettable taste adventure, learn new skills, explore new flavors and connect with a community of enthusiasts sharing the same interests.
+                <h3 class="Chefs">Our Chefs:</h3>
+            <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Specialty</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Massimo Bottura</td>
+                <td>Italian food</td>
+            </tr>
+            <tr>
+                <td>Alain Ducasse</td>
+                <td>gastronomic cooking</td>
+            </tr>
+            <tr>
+                <td>Gastón Acurio</td>
+                <td>Peruvian cuisine</td>
+            </tr>
+            <tr>
+                <td>Mokhtar Ktarir</td>
+                <td>Tunisia Cooking</td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+        <div class="container1">
+       <h1 class="adv">One of the advantages of discovering the cuisine of other cultures : </h1>
+       <p>Food is considered a part of intangible cultural heritage, a way of life that is passed down from generation to generation. Traditional recipes, cooking techniques, and dining etiquette can reflect the values and beliefs of different communities and are all vital parts of cultural heritage. The UNESCO Intangible Cultural Heritage list includes many dishes and food-related customs and traditions, including:</p>
+       <ul>
+       <li>Al-Mansaf, a festive banquet in Jordan</li>
+       <li>Harissa from Tunisia</li>
+       <li>Traditional tea processing techniques and social practices in China</li>
+       <li>Culture of Ukrainian borscht cooking</li>
+       <li>Arabic coffee, a symbol of generosity in Saudi Arabia, Oman, Qatar, and the UAE</li>
+     
+        </div>
+        <div class="container">
+        <h1 class="our">Our Services : </h1>
+       <br>
+      Recipes from around the world 
+       <br>
+       Online cooking classes
+       <br>
+       Exploration of culinary diversity <br>
+       Recipes and tutorials <br>
+    <img src={{asset('images/photo8.jpg')}} width= "180%">
+
+        </div>
+    </div>
+{% endblock %}

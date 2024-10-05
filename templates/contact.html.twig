@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+      
+{% block stylesheets %}
+    {{ parent() }}
+    
+    <style>
+    body{
+       background: #fffff; 
+    }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 100px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #3bb5ca;
+            background-image: url('/images/kkk.jpeg');
+            
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color:#ffc93c;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color:#ffc93c;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<script>
+function validateForm() {
+    var confirmation = confirm("Are you sure you want to send this Message?");
+}
+</script>
+
+<div class="container">
+    <h1>Contact us</h1>
+    <form id="contact-form" method="POST">
+        {{ form_widget(form) }}
+       <hr>
+       <div> <button type="submit" class="btn btn-Warning" onclick="validateForm()">Send</button> </div>
+        </form> 
+    
+</div>
+{% endblock %}

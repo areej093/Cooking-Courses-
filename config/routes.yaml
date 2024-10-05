@@ -1,0 +1,24 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+
+# config/routes.yaml
+
+# config/routes.yaml
+
+recipes_index:
+    path: /recipes
+    controller: App\Controller\RecipeController::index
+
+
+recipe_new:
+    path: /recipe/new
+    controller: App\Controller\RecipeController::new
+
+recipe_delete:
+    path: /recipe/delete/{id}
+    controller: App\Controller\RecipeController::delete
+    methods: ['DELETE']
+
+
